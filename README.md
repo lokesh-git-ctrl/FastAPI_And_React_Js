@@ -1,110 +1,103 @@
-# Inventory Management App
+🏭 Inventory Management App
 
-A full-stack Inventory Management Application to manage products and suppliers, built with **React**, **FastAPI**, and **PostgreSQL**.  
+A full-stack Inventory Management application to manage products and suppliers, built using React for the frontend and FastAPI for the backend with PostgreSQL as the database.
 
-This app allows users to **add, update, delete, and view products**, manage **suppliers**, and track **inventory quantities, sales, and revenue** in a user-friendly interface.
+🚀 Features
+Product Management
 
----
+🛒 Add, Update, Delete Products
 
-## Features
+📊 View product list with details: ID, Name, Quantity In Stock, Quantity Sold, Unit Price, Revenue
 
-### Product Management
-- Add new products
-- Update product details (name, stock quantity, unit price)
-- Delete products
-- View product list with columns: ID, Name, Quantity In Stock, Quantity Sold, Unit Price, Revenue
-- Automatic calculation of revenue based on quantity sold × unit price
+💰 Automatic calculation of revenue
 
-### Supplier Management
-- View supplier details linked to a product
-- Update supplier information (name, company, email, phone)
-- Delete supplier
-- Add new supplier
-- Send email to suppliers (button placeholder for future integration)
+Supplier Management
 
-### User Interface
-- Interactive and responsive **React Bootstrap** UI
-- Modal forms for updating products and suppliers
-- Confirmation dialogs for delete actions
+🧑‍💼 View and update supplier details (Name, Company, Email, Phone)
 
----
+➕ Add new supplier
 
-## Tech Stack
+🗑️ Delete supplier
 
-- **Frontend:** React, React Bootstrap, Context API, Fetch API  
-- **Backend:** FastAPI, SQLAlchemy, Pydantic  
-- **Database:** PostgreSQL  
-- **Authentication & Authorization:** JWT (if implemented)  
+✉️ Send email to suppliers (placeholder for future feature)
 
----
+UI & UX
 
-## Screenshots
+📱 Responsive Design using React Bootstrap
 
-![Product List](./screenshots/product_list.png)  
-![Update Product Modal](./screenshots/update_product_modal.png)  
-![Supplier Modal](./screenshots/supplier_modal.png)
+🔄 Modal forms for updating products and suppliers
 
----
+⚠️ Confirmation dialogs for delete actions
 
-## Setup & Installation
+🛠️ Tech Stack
 
-### Backend (FastAPI)
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/inventory-management-app.git
-   cd inventory-management-app/backend
-Create a virtual environment and install dependencies:
+Frontend: React, React Bootstrap, Context API, Fetch API
 
-bash
-Copy code
+Backend: FastAPI, SQLAlchemy, Pydantic
+
+Database: PostgreSQL
+
+Authentication & Authorization: JWT (optional)
+
+📁 Project Structure
+InventoryManagementApp/
+├── backend/
+│   ├── main.py          # FastAPI app
+│   ├── models.py        # Database models
+│   ├── routers/         # API routes (product, supplier)
+│   └── database.py      # DB connection
+├── frontend/
+│   ├── src/
+│   │   ├── components/  # React components
+│   │   ├── App.jsx
+│   │   └── index.jsx
+│   └── public/
+├── README.md
+└── requirements.txt
+
+💻 Setup & Installation
+Backend
+
+Clone the repo:
+
+git clone https://github.com/your-username/inventory-management-app.git
+cd inventory-management-app/backend
+
+
+Create virtual environment & install dependencies:
+
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
+venv\Scripts\activate      # Windows
+source venv/bin/activate   # Linux/Mac
 pip install -r requirements.txt
-Configure PostgreSQL connection in database.py.
 
-Run the backend server:
 
-bash
-Copy code
+Configure PostgreSQL connection in database.py
+
+Run backend server:
+
 uvicorn main:app --reload
-Frontend (React)
-Navigate to the frontend directory:
 
-bash
-Copy code
+Frontend
+
+Navigate to frontend:
+
 cd ../frontend
+
+
 Install dependencies:
 
-bash
-Copy code
 npm install
-Start the development server:
 
-bash
-Copy code
+
+Start development server:
+
 npm start
-API Endpoints
-Products
-GET /product/product/ - Get all products
 
-POST /product/add/ - Add new product
 
-PUT /product/update/{product_id}/ - Update product
+Open browser at: http://localhost:3000
 
-DELETE /product/delete/{product_id}/ - Delete product
-
-Suppliers
-GET /supplier/{id}/ - Get supplier by ID
-
-POST /supplier/add/ - Add new supplier
-
-PUT /supplier/update/{id}/ - Update supplier
-
-DELETE /supplier/delete/{id}/ - Delete supplier
-
-Usage
-Open the app in the browser (http://localhost:3000)
+📌 Usage
 
 View products in the table
 
@@ -114,11 +107,14 @@ Click Supplier to view/update supplier details
 
 Click Delete to remove products or suppliers
 
-Future Enhancements
-Integrate real email notifications to suppliers
+Add new suppliers using Add Supplier button
 
-Add authentication and user roles
+🔮 Future Enhancements
 
-Add search and filtering for products and suppliers
+Real email notifications to suppliers
 
-Add export reports (CSV/PDF)
+Authentication & roles
+
+Search and filter for products and suppliers
+
+Export reports (CSV/PDF)

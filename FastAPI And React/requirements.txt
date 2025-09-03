@@ -1,0 +1,6 @@
+SQLAlchemy
+psycopg2-binary
+email-validator
+fastapi-mail
+python-dotenv
+--upgrade certifi
